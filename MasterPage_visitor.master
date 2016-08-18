@@ -48,7 +48,7 @@
                         class="icon-bar"></span><span class="icon-bar"></span>
                 </button>--%>
                 <%--<a class="navbar-brand" href="#"><i class="fa fa-diamond"></i>Akshara</a>--%>
-                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="navbar-brand fa fa-camera" > Lancelot & Sen</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="navbar-brand fa fa-camera" > Trip & Shoot</asp:HyperLink>
             </div>
             <div class="navbar-collapse collapse">
                 <!-- Left nav -->

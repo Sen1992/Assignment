@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage_visitor.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="test" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainBody" Runat="Server">
-    
-        <!-- Carousel -->
+<asp:Content ID="Content1" ContentPlaceHolderID="MainBody" runat="Server">
+
+    <!-- Carousel -->
     <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -11,9 +11,9 @@
                     Width="100px" Height="50px" /></li>
             <li data-target='#carousel-example-generic' data-slide-to='1'>
                 <asp:Image ID="Image2" runat="server" ImageUrl="~/img/13.jpg" Width="100px" Height="50px" /></li>
-            </li>
+
             <li data-target='#carousel-example-generic' data-slide-to='2'>
-                <asp:Image ID="Image3" runat="server" ImageUrl="~/img/14.jpg" Width="100px" Height="50px" /></li></li>
+                <asp:Image ID="Image3" runat="server" ImageUrl="~/img/14.jpg" Width="100px" Height="50px" /></li>
         </ol>
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
@@ -21,38 +21,38 @@
                 <!-- <img src="#" alt="" /> -->
                 <div class="main-text hidden-xs">
                     <div class="col-md-12 text-center">
-                        <h1>
-                            Let your <b class="yellow">smile</b> change the <b class="yellow">world</b><br />
-                            <span class="span">Not the world change your smile.</span></h1>
+                        <h1>The<b class="yellow"> world</b> puts off its <b class="yellow">mask </b><br />
+                            <span class="span">of vastness to its lover.</span></h1>
+                        
                         <div class="">
-                            <asp:HyperLink ID="HyperLink1" runat="server" CssClass="btn btn-clear btn-sm btn-min-block">Login</asp:HyperLink>
-                            <asp:HyperLink ID="HyperLink2" runat="server" CssClass="btn btn-clear btn-sm btn-min-block                           ">Registration</asp:HyperLink>
-                           </div>
+                            <asp:HyperLink ID="HyperLink1" runat="server" CssClass="btn btn-clear btn-sm btn-min-block" NavigateUrl="Login.aspx">Login</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink2" runat="server" CssClass="btn btn-clear btn-sm btn-min-block" NavigateUrl="Registration.aspx">Registration</asp:HyperLink>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="item two">
                 <div class="main-text hidden-xs">
                     <div class="col-md-12 text-center">
-                        <h1>
-                            A <b class="yellow">Goal</b> without <b class="yellow">a plan</b><br />
-                            <span class="span">is just a wish</span></h1>
-                        <div class="">
+                        <h1>If you shed tears when you miss the <b class="yellow">Sun</b>,<br /> you also miss the<b class="yellow"> Stars</b><span class="span">.</span></h1>
+                         
+
+                       <%-- <div class="">
                             <asp:HyperLink ID="HyperLink3" runat="server" CssClass="btn btn-clear btn-sm btn-min-block">learn More</asp:HyperLink>
-                            <asp:HyperLink ID="HyperLink4" runat="server" CssClass="btn btn-clear btn-sm btn-min-block                           ">Download</asp:HyperLink>
-                            </div>
+                            <asp:HyperLink ID="HyperLink4" runat="server" CssClass="btn btn-clear btn-sm btn-min-block">Download</asp:HyperLink>
+                        </div>--%>
                     </div>
                 </div>
             </div>
             <div class="item three">
                 <div class="main-text hidden-xs">
                     <div class="col-md-12 text-center">
-                        <h1>
-                            You cannot<b class="yellow"> believe</b> in <b class="yellow">God</b><br />
-                            <span class="span">until you believe in yourself.</span></h1>
-                        <div class="">
+                        <h1>Like<b class="yellow"> Sunday</b><br /> like <b class="yellow">Rain</b>
+                            <span class="span">.</span></h1>
+                        <%--<div class="">
                             <asp:HyperLink ID="HyperLink5" runat="server" CssClass="btn btn-clear btn-sm btn-min-block">Android</asp:HyperLink>
-                            <asp:HyperLink ID="HyperLink6" runat="server" CssClass="btn btn-clear btn-sm btn-min-block                           ">Apple</asp:HyperLink></div>
+                            <asp:HyperLink ID="HyperLink6" runat="server" CssClass="btn btn-clear btn-sm btn-min-block">Apple</asp:HyperLink>
+                        </div>--%>
                     </div>
                 </div>
             </div>
@@ -60,8 +60,7 @@
         <!-- Controls -->
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span></a><a class="right carousel-control"
-                href="#carousel-example-generic" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right">
-                </span></a>
+                href="#carousel-example-generic" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
     <!-- Carousel -->
 
@@ -72,7 +71,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="background double animated wow fadeInUp" data-wow-delay="0.2s">
-                        <span><strong>B</strong>log</span></h2>                    
+                        <span><strong>Welcome</strong></span></h2>
                 </div>
             </div>
             <!-- /.row -->
@@ -81,23 +80,21 @@
                 <div class="col-md-7">
                     <a href="#">
                         <img class="img-responsive animated wow fadeInLeft" data-wow-delay="0.2s" src="img/700x300.jpg"
-                            alt="">                       
+                            alt="">
                     </a>
                 </div>
-                <div class="col-md-5 animated wow fadeInRight" data-wow-delay="0.4s">
+                <div class="col-md-4 animated wow fadeInRight" data-wow-delay="0.4s">
                     <h3>
-                        <strong>Our Projects</strong></h3>
-                    <h4>
-                        NewBingo</h4>
+                        <strong>Trip & Shoot</strong></h3>
+                    <h4>Lancelot & Sen</h4>
                     <p>
-                        Akshara is a library to buy Bootstrap themes and templates for your business need.
-                        Want more Bootstrap themes & templates? Subscribe to our mailing list to receive
-                        an update when new items arrive!</p>
-                    <a class="btn btn-success" href="#">View Project <span class="glyphicon glyphicon-chevron-right">
-                    </span></a>
+                        Trip & Shoot is a website where you may share your original photos 
+                        and also a place to record the moment your heart miss a beat.
+                    </p>
+                    
                 </div>
             </div>
-           
+
         </div>
     </div>
 
