@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-  <siteMapNode url="" title="Root"  description=" acontainer for the pages">
+  <siteMapNode title="Root">
     <siteMapNode url="~/Home.aspx" title="Home"  description="The Home page for the website" />
-    <siteMapNode url="~/Registration.aspx" title="Registration"  description="The registration page for user" />
+    <siteMapNode url="~/register.aspx" title="Registration"  description="The registration page for user" />
     <siteMapNode url="~/AboutUs.aspx" title="About Us"  description="Show the information about this website" >
       <siteMapNode url="~/OurHistory.aspx" title="Our History"  description="The description for this website" />
       <siteMapNode url="~/FAQ.aspx" title="FAQ"  description="Frequently asked questions" />

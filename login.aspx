@@ -24,8 +24,11 @@
     <![endif]-->
     <!-- Login -->
     <div class="container padding100 full">
+
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50">
+            
             <div class="registrationform">
+          
                 <h1 class="text-left">
                     Log in to your app</h1>
                 <div class="form-group">

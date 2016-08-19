@@ -39,92 +39,98 @@
 <body>
     <form id="form1" runat="server">
 
+        <%--<asp:SiteMapPath ID="SiteMapPath1" runat="server">
+            <PathSeparatorTemplate>
+                -->
+            </PathSeparatorTemplate>
+        </asp:SiteMapPath>--%>
+
         <!-- Navbar fixed top -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-               <%-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <%-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
                         class="icon-bar"></span><span class="icon-bar"></span>
                 </button>--%>
-                <%--<a class="navbar-brand" href="#"><i class="fa fa-diamond"></i>Akshara</a>--%>
-                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="navbar-brand fa fa-camera" > Trip & Shoot</asp:HyperLink>
-            </div>
-            <div class="navbar-collapse collapse">
-                <!-- Left nav -->
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="Home.aspx" runat="server">Home</a></li>
-                    <li><a href="register.aspx" runat="server">Registration</a></li>
-                    <li><a href="login.aspx" runat="server">Login</a></li>     
-                </ul>
+                    <%--<a class="navbar-brand" href="#"><i class="fa fa-diamond"></i>Akshara</a>--%>
+                    <asp:HyperLink ID="HyperLink1" runat="server" CssClass="navbar-brand fa fa-camera"> Trip & Shoot</asp:HyperLink>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <!-- Left nav -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="Home.aspx" runat="server">Home</a></li>
+                        <li><a href="register.aspx" runat="server">Registration</a></li>
+                        <li><a href="login.aspx" runat="server">Login</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <!--Main Body Part-->
-    <div>
-        <asp:ContentPlaceHolder id="MainBody" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+        <!--Main Body Part-->
+        <div>
+            <asp:ContentPlaceHolder ID="MainBody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
 
 
 
-    <!--footer-->
-    <footer id="fh5co-footer" class="padding100">
-			
-			<div class="fh5co-footer-content">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.2s">
-							<h3 class="fh5co-lead">Contact</h3>
-							<ul>
-								<li><a href="#">Email</a></li>
-								
-							</ul>
-						</div>
-						<div class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.4s">
-							<h3 class="fh5co-lead">About</h3>
-							<ul>
-								<li><a href="http://users.monash.edu.au/~sgrose/msh/disclaimer.htm">Course Disclaimer</a></li>
-								<li><a href="#">Acknowledgement</a></li>
-							</ul>
-						</div>
-						<div class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.6s">
-							<h3 class="fh5co-lead">More Links</h3>
-							<ul>
-								<li><a href="#">AdRotator</a></li>
-								<li><a href="#">Master Page</a></li>
-								
-							</ul>
-						</div>
+        <!--footer-->
+        <footer id="fh5co-footer" class="padding100">
 
-						<div class="col-md-3 col-sm-12 col-md-pull-9 animated wow fadeInLeft" data-wow-delay="0.8s">
-							<div class="fh5co-footer-logo"><a href="#">FIT5192</a></div>
-							<p class="fh5co-copyright"><small>&copy;Copyright 2016. By Lancelot & Sen.<br></small></p>
-							<p class="fh5co-social-icons">
-								<a href="#"><i class="fa fa-twitter"></i></a>
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-github"></i></a>
-								<a href="#"><i class="fa fa-youtube"></i></a>
-							</p>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</footer>
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/wow.min.js" type="text/javascript"></script>
-    <script src="js/tutorial.js"></script>
-    <script src="css/owl/owl.carousel.js" type="text/javascript"></script>
-    <!-- SmartMenus jQuery plugin -->
-    <script type="text/javascript" src="js/jquery.smartmenus.js"></script>
-    <!-- SmartMenus jQuery Bootstrap Addon -->
-    <script type="text/javascript" src="js/jquery.smartmenus.bootstrap.js"></script>
+            <div class="fh5co-footer-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.2s">
+                            <h3 class="fh5co-lead">Contact</h3>
+                            <ul>
+                                <li><a href="#">Email</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.4s">
+                            <h3 class="fh5co-lead">About</h3>
+                            <ul>
+                                <li><a href="http://users.monash.edu.au/~sgrose/msh/disclaimer.htm">Course Disclaimer</a></li>
+                                <li><a href="#">Acknowledgement</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.6s">
+                            <h3 class="fh5co-lead">More Links</h3>
+                            <ul>
+                                <li><a href="#">AdRotator</a></li>
+                                <li><a href="#">Master Page</a></li>
+
+                            </ul>
+                        </div>
+
+                        <div class="col-md-3 col-sm-12 col-md-pull-9 animated wow fadeInLeft" data-wow-delay="0.8s">
+                            <div class="fh5co-footer-logo"><a href="#">FIT5192</a></div>
+                            <p class="fh5co-copyright"><small>&copy;Copyright 2016. By Lancelot & Sen.<br>
+                            </small></p>
+                            <p class="fh5co-social-icons">
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-github"></i></a>
+                                <a href="#"><i class="fa fa-youtube"></i></a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/wow.min.js" type="text/javascript"></script>
+        <script src="js/tutorial.js"></script>
+        <script src="css/owl/owl.carousel.js" type="text/javascript"></script>
+        <!-- SmartMenus jQuery plugin -->
+        <script type="text/javascript" src="js/jquery.smartmenus.js"></script>
+        <!-- SmartMenus jQuery Bootstrap Addon -->
+        <script type="text/javascript" src="js/jquery.smartmenus.bootstrap.js"></script>
     </form>
 </body>
 </html>

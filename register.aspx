@@ -39,15 +39,14 @@
 </script>
 
 
-    <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-    <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-    <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-    <!--[if IE 9]> <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+    <!--[if lt IE 7]> <html> <![endif]-->
+    <!--[if IE 7]>    <html> <![endif]-->
+    <!--[if IE 8]>    <html> <![endif]-->
+    <!--[if IE 9]> <html> <![endif]-->
     <meta charset="utf-8" >
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Coming soon, Bootstrap, Bootstrap 3.0, Free Coming Soon, free coming soon, free template, coming soon template, Html template, html template, html5, Code lab, codelab, codelab coming soon template, bootstrap coming soon template">
-    <title>Register the app</title>
+    <meta name="description" content="Coming soon, Bootstrap, Bootstrap 3.0, Free Coming Soon, free coming soon, free template, coming soon templRegister the app</title>
     <!-- ============ Google fonts ============ -->
     <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet'
         type='text/css' />
@@ -58,10 +57,22 @@
     <link href="css/css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/css/font-awesome.css" rel="stylesheet" type="text/css" />
     <div class="container padding100 ful">
+            
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <!--bread crump-->
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="0.8em" PathSeparator=" : ">
+                <CurrentNodeStyle ForeColor="#333333" />
+                <NodeStyle Font-Bold="True" ForeColor="#990000" />
+                <PathSeparatorStyle Font-Bold="True" ForeColor="#990000" />
+                <PathSeparatorTemplate>
+                    -->
+                </PathSeparatorTemplate>
+                <RootNodeStyle Font-Bold="True" ForeColor="#FF8000" />
+            </asp:SiteMapPath>
+
             <div class="registrationform">
                 <div class="form-horizontal">
-                    <fieldset>
+                    <fieldset>                        
                         <legend>Registration Form <i class="fa fa-pencil pull-right"></i></legend>
                         <div class="form-group">
                             <asp:Label ID="Label1" runat="server" Text="Username:" CssClass="col-lg-2 control-label"></asp:Label>

@@ -67,6 +67,17 @@
     <!--introduction-->
     <div class="padding100" id="blog">
         <div class="container">
+            <!--bread crump-->
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="0.8em" PathSeparator=" : ">
+                <CurrentNodeStyle ForeColor="#333333" />
+                <NodeStyle Font-Bold="True" ForeColor="#7C6F57" />
+                <PathSeparatorStyle Font-Bold="True" ForeColor="#5D7B9D" />
+                <PathSeparatorTemplate>
+                    -->
+                </PathSeparatorTemplate>
+                <RootNodeStyle Font-Bold="True" ForeColor="#5D7B9D" />
+            </asp:SiteMapPath>
+
             <!-- Page Heading -->
             <div class="row">
                 <div class="col-lg-12">
