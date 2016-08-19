@@ -68,7 +68,7 @@
                             <div class="col-lg-10">
                                 <asp:TextBox ID="UNTextbox" runat="server" CssClass="form-control"></asp:TextBox>
                             </div>
-                            <asp:RequiredFieldValidator ID="vldUsername" runat="server" Display="Dynamic" ErrorMessage="Please input a user name." ControlToValidate="UNTextbox" />
+                            <asp:RequiredFieldValidator ID="vldUsername" runat="server" Display="Dynamic" Font-Size="15px" ForeColor="Red" ErrorMessage="Please input a user name." ControlToValidate="UNTextbox" />
                         </div>
                         
                         <div class="form-group">
@@ -77,8 +77,8 @@
                                 <asp:TextBox ID="PWTextbox" runat="server" CssClass="form-control"
                                     TextMode="Password"></asp:TextBox>
                             </div>
-                            <asp:RequiredFieldValidator ID="vldPassword" runat="server"  Display="Dynamic" ErrorMessage="Please input a password." ControlToValidate="PWTextbox" />
-                            <asp:CustomValidator ID="vldlenth" runat="server" Display="Dynamic" ControlToValidate="PWTextbox" ClientValidationFunction="check" Text="Password must be between 6 and 18.">
+                            <asp:RequiredFieldValidator ID="vldPassword" runat="server" Font-Size="15px" ForeColor="Red" Display="Dynamic" ErrorMessage="Please input a password." ControlToValidate="PWTextbox" />
+                            <asp:CustomValidator ID="vldlenth" runat="server" Font-Size="15px" ForeColor="Red" Display="Dynamic" ControlToValidate="PWTextbox" ClientValidationFunction="check" Text="Password must be between 6 and 18.">
                             </asp:CustomValidator>
                         </div>
                         <div class="form-group">
@@ -86,7 +86,7 @@
                             <div class="col-lg-10">
                                 <asp:TextBox ID="PWTextbox1" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
                             </div>
-                            <asp:CompareValidator ID="comparePassword" runat="server" Display="Dynamic" ErrorMessage="Passwords entered are not the same." 
+                            <asp:CompareValidator ID="comparePassword" runat="server" Font-Size="15px" ForeColor="Red" Display="Dynamic" ErrorMessage="Passwords entered are not the same." 
                                 ControlToCompare="PWTextbox" ControlToValidate="PWTextbox1" />
                         </div>
                         <div class="form-group">
@@ -101,7 +101,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <asp:RequiredFieldValidator ID="vldGender" runat="server" Display="Dynamic" ErrorMessage="Please select a gender" ControlToValidate="RadioButtonList1" />
+                            <asp:RequiredFieldValidator ID="vldGender" runat="server" Font-Size="15px" ForeColor="Red" Display="Dynamic" ErrorMessage="Please select a gender" ControlToValidate="RadioButtonList1" />
                         </div>
                         <div class="form-group">
                           <asp:Label ID="Label5" runat="server" Text="Degree" CssClass="col-lg-2 control-label"></asp:Label>                          
@@ -120,19 +120,19 @@
                             <div class="col-lg-10">
                                 <asp:TextBox ID="EmailTextbox" runat="server" CssClass="form-control"></asp:TextBox>
                             </div>
-                            <asp:RequiredFieldValidator ID="vldEmail" runat="server" Display="Dynamic" ErrorMessage="Please enter a Email." ControlToValidate="EmailTextbox" />
-                            <asp:RegularExpressionValidator ID="vldEmailformat" runat="server" ValidationExpression=".*@.*\..*" 
+                            <asp:RequiredFieldValidator ID="vldEmail" Font-Size="15px" ForeColor="Red" runat="server" Display="Dynamic" ErrorMessage="Please enter a Email." ControlToValidate="EmailTextbox" />
+                            <asp:RegularExpressionValidator ID="vldEmailformat" runat="server" Font-Size="15px" ForeColor="Red" ValidationExpression=".*@.*\..*" 
                                 ControlToValidate="EmailTextbox" ErrorMessage="Invalid email" Display="Dynamic" />
                         </div>
 
                         <div class="form-group">
                             <asp:Label ID="Label8" runat="server" Text="PhoneNo:" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
-                                <asp:TextBox ID="PhoneTextbox" runat="server" Display="Dynamic" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="PhoneTextbox" runat="server" Font-Size="15px" ForeColor="Red" Display="Dynamic" CssClass="form-control"></asp:TextBox>
                             </div>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter a Email." ControlToValidate="EmailTextbox" />
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ValidationExpression="\b1\d{10}\b|\b8\d{7}\b" 
-                                ControlToValidate="PhoneTextbox" ErrorMessage="Invalid Phone No" Display="Dynamic" />
+                                ControlToValidate="PhoneTextbox" Font-Size="15px" ForeColor="Red" ErrorMessage="Invalid Phone No" Display="Dynamic" />
                         </div>
 
 
@@ -141,9 +141,9 @@
                             <div class="col-lg-10">
                                 <asp:TextBox ID="HPTextbox" runat="server" Display="Dynamic" CssClass="form-control"></asp:TextBox>
                             </div>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter a Email." ControlToValidate="EmailTextbox" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Font-Size="15px" ForeColor="Red" ErrorMessage="Please enter a Email." ControlToValidate="EmailTextbox" />
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ValidationExpression="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?" 
-                                ControlToValidate="HPTextbox" ErrorMessage="Invalid URL" Display="Dynamic" />
+                                ControlToValidate="HPTextbox" Font-Size="15px" ForeColor="Red" ErrorMessage="Invalid URL" Display="Dynamic" />
                         </div>
 
                         <div class="form-group">
@@ -169,15 +169,15 @@
         // You may also attach Backstretch to a block-level element
         $.backstretch(
         [
-            "img/44.jpg",
-            "img/colorful.jpg",
+      //      "img/44.jpg",
+    //        "img/colorful.jpg",
             "img/34.jpg",
-            "img/images.jpg"
+  //          "img/images.jpg"
         ],
 
         {
-            duration: 4500,
-            fade: 1500
+         //   duration: 4500,
+          //  fade: 1500
         }
     );
     </script>
