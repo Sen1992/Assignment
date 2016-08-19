@@ -25,8 +25,8 @@
                             <span class="span">of vastness to its lover.</span></h1>
                         
                         <div class="">
-                            <asp:HyperLink ID="HyperLink1" runat="server" CssClass="btn btn-clear btn-sm btn-min-block" NavigateUrl="Login.aspx">Login</asp:HyperLink>
-                            <asp:HyperLink ID="HyperLink2" runat="server" CssClass="btn btn-clear btn-sm btn-min-block" NavigateUrl="Registration.aspx">Registration</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink1" runat="server" CssClass="btn btn-clear btn-sm btn-min-block" NavigateUrl="~/login.aspx">Login</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink2" runat="server" CssClass="btn btn-clear btn-sm btn-min-block" NavigateUrl="~/register.aspx">Registration</asp:HyperLink>
                         </div>
                     </div>
                 </div>

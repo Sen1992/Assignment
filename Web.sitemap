@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="Root"  description=" acontainer for the pages">
+    <siteMapNode url="~/Home.aspx" title="Home"  description="The Home page for the website" />
+    <siteMapNode url="~/Registration.aspx" title="Registration"  description="The registration page for user" />
+    <siteMapNode url="~/AboutUs.aspx" title="About Us"  description="Show the information about this website" >
+      <siteMapNode url="~/OurHistory.aspx" title="Our History"  description="The description for this website" />
+      <siteMapNode url="~/FAQ.aspx" title="FAQ"  description="Frequently asked questions" />
+    </siteMapNode>
+    <siteMapNode url="~/SiteMap.aspx" title="Site Map"  description="The Site Map page which introduces a skeleton for the website" />
+    <siteMapNode url="~/Documentation.aspx" title="Documentation"  description="The detail documentation about this website" />
+    <siteMapNode url="~/SendMail.aspx" title="SendMail"  description="The page where you may send your email to other users" />
+  </siteMapNode>
+</siteMap>
