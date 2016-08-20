@@ -3,12 +3,12 @@
   <siteMapNode title="Root">
     <siteMapNode url="~/Home.aspx" title="Home"  description="The Home page for the website" />
     <siteMapNode url="~/register.aspx" title="Registration"  description="The registration page for user" />
-    <siteMapNode url="~/AboutUs.aspx" title="About Us"  description="Show the information about this website" >
-      <siteMapNode url="~/History.aspx" title="Our History"  description="The description for this website" />
-      <siteMapNode url="~/FAQ.aspx" title="FAQ"  description="Frequently asked questions" />
+    <siteMapNode url="~/Auth/AboutUs.aspx" title="About Us"  description="Show the information about this website" >
+      <siteMapNode url="~/Auth/History.aspx" title="Our History"  description="The description for this website" />
+      <siteMapNode url="~/Auth/FAQ.aspx" title="FAQ"  description="Frequently asked questions" />
     </siteMapNode>
-    <siteMapNode url="~/SiteMap.aspx" title="Site Map"  description="The Site Map page which introduces a skeleton for the website" />
-    <siteMapNode url="~/Documentation.aspx" title="Documentation"  description="The detail documentation about this website" />
-    <siteMapNode url="~/SendMail.aspx" title="SendMail"  description="The page where you may send your email to other users" />
+    <siteMapNode url="~/Auth/SiteMap.aspx" title="Site Map"  description="The Site Map page which introduces a skeleton for the website" />
+    <siteMapNode url="~/Auth/Documentation.aspx" title="Documentation"  description="The detail documentation about this website" />
+    <siteMapNode url="~/Auth/SendMail.aspx" title="SendMail"  description="The page where you may send your email to other users" />
   </siteMapNode>
 </siteMap>

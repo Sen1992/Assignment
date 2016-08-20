@@ -19,7 +19,7 @@
     <link href="css/owl/owl.theme.css" rel="stylesheet" type="text/css" />
     <link href="css/owl/owl.transitions.css" rel="stylesheet" type="text/css" />
     <!-- Custom CSS -->
-    <link href="css/1-col-portfolio.css" rel="stylesheet">
+    <link href="css/1-col-portfolio.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet'
         type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700"
@@ -55,20 +55,23 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="Home.aspx" runat="server">Home</a></li>
                     <li><a href="register.aspx" runat="server">Registration</a></li>
-                    <li class="dropdown"><a href="AboutUs.aspx" class="dropdown-toggle" data-toggle="dropdown"
+                    <li class="dropdown"><a href="~/Auth/AboutUs.aspx" class="dropdown-toggle" data-toggle="dropdown"
                         role="button" aria-haspopup="true" aria-expanded="false" runat="server">About Us<span class="caret"
                             runat="server"></span></a>
                         <ul class="dropdown-menu" data-dropdown-in="fadeInUp" data-dropdown-out="fadeOutDown">
-                            <li><a href="History.aspx" runat="server">Our History</a></li>
-                            <li><a href="FAQ.aspx" runat="server">Frequently Asked Questions</a></li>
+                            <li><a href="~/Auth/History.aspx" runat="server">Our History</a></li>
+                            <li><a href="~/Auth/FAQ.aspx" runat="server">Frequently Asked Questions</a></li>
                             
                         </ul>
                     </li>
-                    <li><a href="SiteMap.aspx" runat="server">Site Map</a></li>
-                    <li><a href="Documentation.aspx" runat="server">Documentation</a></li>
-                    <li>
+                    <li><a href="~/Auth/SiteMap.aspx" runat="server">Site Map</a></li>
+
+                    <li><a href="~/Auth/Documentation.aspx" runat="server">Documentation</a></li>
+<!--                    <li>
                         <asp:Label ID="lbl_user" runat="server" Text="Hello,User"></asp:Label>
-                    </li>
+                    </li>-->
+                    <li><asp:HyperLink ID="hluser" runat="server" Text ="Login" /></li>
+                    <li><asp:LinkButton ID="hllogout" runat="server" Text ="Logout" OnClick="Logout" /></li>
                 </ul>
             </div>
         </div>
@@ -91,7 +94,7 @@
 						<div class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.2s">
 							<h3 class="fh5co-lead">Contact</h3>
 							<ul>
-								<li><a href="#">Email</a></li>
+								<li><a href="SendMail.aspx">Email</a></li>
 								
 							</ul>
 						</div>

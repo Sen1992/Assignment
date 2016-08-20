@@ -91,7 +91,7 @@
                 <div class="col-md-7">
                     <a href="#">
                         <img class="img-responsive animated wow fadeInLeft" data-wow-delay="0.2s" src="img/700x300.jpg"
-                            alt="">
+                            alt="" />
                     </a>
                 </div>
                 <div class="col-md-4 animated wow fadeInRight" data-wow-delay="0.4s">

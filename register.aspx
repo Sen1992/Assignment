@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/MasterPage_visitor.master" CodeFile="register.aspx.cs" Inherits="preview_dotnet_templates_registration_Form_index" %>
 <asp:Content ID="Registercontent" ContentPlaceHolderID="MainBody" Runat="Server">
-<asp:accessdatasource runat="server" id="users" DataFile="~/DB/database.accdb" 
-    SelectCommand="SELECT * FROM [user]" DeleteCommand="DELETE FROM [user] WHERE [ID] = ?" InsertCommand="INSERT INTO [user] ([username], [password], [gender], [degree], [email], [phoneno], [homepage]) VALUES (?, ?, ?, ?, ?, ?, ?)" OnSelecting="users_Selecting" UpdateCommand="UPDATE [user] SET [username] = ?, [password] = ?, [gender] = ?, [degree] = ?, [email] = ?, [phoneno] = ?, [homepage] = ? WHERE [ID] = ?">
+    <asp:accessdatasource runat="server" id="users" DataFile="~/App_Data/database.accdb" 
+    SelectCommand="SELECT * FROM [user]" DeleteCommand="DELETE FROM [user] WHERE [ID] = ?" InsertCommand="INSERT INTO [user] ([username], [password], [gender], [degree], [email], [phoneno], [homepage], [hobby]) VALUES (?, ?, ?, ?, ?, ?, ?, ?)" OnSelecting="users_Selecting" UpdateCommand="UPDATE [user] SET [username] = ?, [password] = ?, [gender] = ?, [degree] = ?, [email] = ?, [phoneno] = ?, [homepage] = ? WHERE [ID] = ?">
     <DeleteParameters>
         <asp:Parameter Name="ID" Type="Int32" />
     </DeleteParameters>
@@ -13,6 +13,7 @@
         <asp:Parameter Name="email" Type="String" /> 
         <asp:Parameter Name="phoneno" Type="String" />
         <asp:Parameter Name="homepage" Type="String" />
+        <asp:Parameter Name="hobby" Type="String" />
     </InsertParameters>
     <UpdateParameters>
         <asp:Parameter Name="username" Type="String" />
@@ -39,14 +40,12 @@
 </script>
 
 
-    <!--[if lt IE 7]> <html> <![endif]-->
-    <!--[if IE 7]>    <html> <![endif]-->
-    <!--[if IE 8]>    <html> <![endif]-->
-    <!--[if IE 9]> <html> <![endif]-->
-    <meta charset="utf-8" >
+    <meta charset="utf-8" />
     <!-- Set the viewport width to device width for mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Coming soon, Bootstrap, Bootstrap 3.0, Free Coming Soon, free coming soon, free template, coming soon templRegister the app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Coming soon, Bootstrap, Bootstrap 3.0, Free Coming Soon, free coming soon, free template, coming soon template, Html template, html template, html5, Code lab, codelab, codelab coming soon template, bootstrap coming soon template" />
+    <title>Register the app</title>
+
     <!-- ============ Google fonts ============ -->
     <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet'
         type='text/css' />
@@ -74,6 +73,11 @@
                 <div class="form-horizontal">
                     <fieldset>                        
                         <legend>Registration Form <i class="fa fa-pencil pull-right"></i></legend>
+                         <asp:HyperLink ID="HyperLink1" runat="server" Font-Italic="true" Font-Size="15px" ForeColor="White" Font-Underline="true" NavigateUrl="~/Auth/ShowAllUsers.aspx">Click here to see all the customers.</asp:HyperLink>
+                         <br />
+                         <asp:HyperLink ID="HyperLink2" runat="server" Font-Italic="true" Font-Size="15px" Font-Underline="true" ForeColor="White" NavigateUrl="~/Auth/SelectUsers.aspx">Click here to search customers under certain condition.</asp:HyperLink>
+                         <hr />
+
                         <div class="form-group">
                             <asp:Label ID="Label1" runat="server" Text="Username:" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
@@ -139,7 +143,7 @@
                         <div class="form-group">
                             <asp:Label ID="Label8" runat="server" Text="PhoneNo:" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
-                                <asp:TextBox ID="PhoneTextbox" runat="server" Font-Size="15px" ForeColor="Red" Display="Dynamic" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="PhoneTextbox" runat="server" Font-Size="15px" Display="Dynamic" CssClass="form-control"></asp:TextBox>
                             </div>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter a Email." ControlToValidate="EmailTextbox" />
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ValidationExpression="\b1\d{10}\b|\b8\d{7}\b" 
@@ -156,13 +160,28 @@
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ValidationExpression="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?" 
                                 ControlToValidate="HPTextbox" Font-Size="15px" ForeColor="Red" ErrorMessage="Invalid URL" Display="Dynamic" />
                         </div>
+                        <div class="form-group">
+                            <asp:Label ID="Label9" runat="server" Text="Hobby:" CssClass="col-lg-2 control-label"></asp:Label>
+                            <div class="col-lg-10">
+                                <div class="checkbox">
+                                   <p>
+                                    <asp:CheckBox ID="ckmusic" runat="server" Text="Music" />
+                                    <asp:CheckBox ID="cksprot" runat="server" Text="Sport" />
+                                    <asp:CheckBox ID="ckreading" runat="server" Text="Reading" />
+                                    <asp:CheckBox ID="cktravel" runat="server" Text="Travel" />
+                                   </p>
+                                </div>        
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
-                                <asp:Button ID="btnSubmit" runat="server" CssClass="btn btn-primary" Text="Submit" OnClick="Register"/>
-                                  <asp:Button ID="btnCancel" runat="server" CssClass="btn btn-warning" Text="Cancel" />                              
+                                <asp:Button ID="btnSubmit" runat="server" CssClass="btn btn-primary" Text="Submit" OnClick="Register"/>                                    
                             </div>
                         </div>
+
+                         <br /><hr />
+                         <asp:Label ID="userdisplay" Font-Size="Larger" runat="server" />
                     </fieldset>
                 </div>
             </div>
