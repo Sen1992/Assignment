@@ -10,7 +10,7 @@
         <asp:Parameter Name="password" Type="String" />
         <asp:Parameter Name="gender" Type="String" />
         <asp:Parameter Name="degree" Type="String" />
-        <asp:Parameter Name="email" Type="String" />
+        <asp:Parameter Name="email" Type="String" /> 
         <asp:Parameter Name="phoneno" Type="String" />
         <asp:Parameter Name="homepage" Type="String" />
     </InsertParameters>

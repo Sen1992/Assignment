@@ -4,7 +4,7 @@
     <siteMapNode url="~/Home.aspx" title="Home"  description="The Home page for the website" />
     <siteMapNode url="~/register.aspx" title="Registration"  description="The registration page for user" />
     <siteMapNode url="~/AboutUs.aspx" title="About Us"  description="Show the information about this website" >
-      <siteMapNode url="~/OurHistory.aspx" title="Our History"  description="The description for this website" />
+      <siteMapNode url="~/History.aspx" title="Our History"  description="The description for this website" />
       <siteMapNode url="~/FAQ.aspx" title="FAQ"  description="Frequently asked questions" />
     </siteMapNode>
     <siteMapNode url="~/SiteMap.aspx" title="Site Map"  description="The Site Map page which introduces a skeleton for the website" />

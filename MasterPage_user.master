@@ -54,18 +54,18 @@
                 <!-- Left nav -->
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="Home.aspx" runat="server">Home</a></li>
-                    <li><a href="Registration.aspx" runat="server">Registration</a></li>
+                    <li><a href="register.aspx" runat="server">Registration</a></li>
                     <li class="dropdown"><a href="AboutUs.aspx" class="dropdown-toggle" data-toggle="dropdown"
                         role="button" aria-haspopup="true" aria-expanded="false" runat="server">About Us<span class="caret"
                             runat="server"></span></a>
                         <ul class="dropdown-menu" data-dropdown-in="fadeInUp" data-dropdown-out="fadeOutDown">
-                            <li><a href="OurHistory.aspx" runat="server">Our History</a></li>
-                            <li><a href="FrequentlyAskedQuestions.aspx" runat="server">Frequently Asked Questions</a></li>
+                            <li><a href="History.aspx" runat="server">Our History</a></li>
+                            <li><a href="FAQ.aspx" runat="server">Frequently Asked Questions</a></li>
                             
                         </ul>
                     </li>
                     <li><a href="SiteMap.aspx" runat="server">Site Map</a></li>
-                    <li><a href="Documentation.htm" runat="server">Documentation</a></li>
+                    <li><a href="Documentation.aspx" runat="server">Documentation</a></li>
                     <li>
                         <asp:Label ID="lbl_user" runat="server" Text="Hello,User"></asp:Label>
                     </li>

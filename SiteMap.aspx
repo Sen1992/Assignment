@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-md-7">
                     <a href="#">
-                        <img class="img-responsive animated wow fadeInLeft" data-wow-delay="0.2s" src="img/700x300.jpg"
+                        <img class="img-responsive animated wow fadeInLeft" data-wow-delay="0.2s" src="img/sitemap.jpg"
                             alt="">
                     </a>
                 </div>
