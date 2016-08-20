@@ -23,17 +23,17 @@ public partial class SendMail : System.Web.UI.Page
                 newMsg.To.Add(new MailAddress(gvRow.Cells[1].Text,gvRow.Cells[0].Text));
             }
         }
-        newMsg.From = new MailAddress("yzh190@student.monash.edu", "Lancelot");
+        newMsg.From = new MailAddress("forneverlancelot@gmail.com", "Lancelot");
         newMsg.Subject = tb_subject.Text;
         newMsg.Body = tb_message.Text;
 
         try
         {
             SmtpClient smtp = new SmtpClient();
-            smtp.Host = "smtp.monash.edu.au";
-            smtp.Port = 465;
+            smtp.Host = "smtp.gmail.com";
+            smtp.Port = 587;
             smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new NetworkCredential("yzh190@student.monash.edu", "De@h75193");
+            smtp.Credentials = new NetworkCredential("forneverlancelot@gmail.com", "zy19931211");
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtp.EnableSsl = true;
             smtp.Send(newMsg);
