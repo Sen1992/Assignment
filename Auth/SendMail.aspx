@@ -67,6 +67,14 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Font-Size="15px" ForeColor="Red" ErrorMessage="Please enter a subject." ControlToValidate="tb_subject" />
                             
                         </div>
+
+                        <div class="form-group">
+                            <asp:Label ID="Label3" runat="server" Text="Attachment" CssClass="col-lg-2 control-label"></asp:Label>
+                            <div class="col-lg-10">                               
+                                <asp:FileUpload ID="fileUpload" runat="server" />
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <asp:Label ID="Label2" runat="server" Text="Message" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
@@ -129,8 +137,9 @@
                         </div>
                         
                         <div class="form-group">
+                            <div class="col-lg-10">
                             <asp:Label ID="lbl_Mail" runat="server" Visible="false" Font-Bold="true" CssClass="col-lg-2 control-label"></asp:Label>
-                            
+                            </div>
                         </div>
                         
                     </fieldset>

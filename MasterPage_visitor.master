@@ -83,7 +83,7 @@
                         <div class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.2s">
                             <h3 class="fh5co-lead">Contact</h3>
                             <ul>
-                                <li><a href="#">Email</a></li>
+                                <li><a href="/Auth/SendMail.aspx">Email</a></li>
 
                             </ul>
                         </div>
