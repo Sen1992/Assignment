@@ -10,6 +10,14 @@ public partial class preview_dotnet_templates_the_big_picture_login : System.Web
     protected void Page_Load(object sender, EventArgs e)
     {
     }
+    protected void Page_PreInit(object sender, EventArgs e)
+    {
+        System.Diagnostics.Debug.WriteLine("theme");
+        if (Request.QueryString["theme"] != null)
+        {
+            Page.Theme = Request.QueryString["theme"].ToString();
+        }
+    }
     protected void CheckLogin(object sender, SqlDataSourceStatusEventArgs e)
     {
         if (e.AffectedRows > 0)

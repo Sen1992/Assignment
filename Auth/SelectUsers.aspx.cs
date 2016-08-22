@@ -10,6 +10,14 @@ public partial class Auth_SelecteUsers : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
     }
+    protected void Page_PreInit(object sender, EventArgs e)
+    {
+        System.Diagnostics.Debug.WriteLine("theme");
+        if (Request.QueryString["theme"] != null)
+        {
+            Page.Theme = Request.QueryString["theme"].ToString();
+        }
+    }
     protected void Findusers(object sender, EventArgs e) {
         Button btn = (Button)sender;
         switch (btn.CommandName) { 

@@ -3,12 +3,9 @@
 <asp:Content ID="loginConten" ContentPlaceHolderID="MainBody" runat="Server">
     <asp:AccessDataSource ID="UserLogin" runat="server" DataFile="~/App_Data/database.accdb" SelectCommand="SELECT * FROM [user]" OnSelected="CheckLogin" />
     <!-- Bootstrap Core CSS -->
-    <link href="css/css/bootstrap1.min.css" rel="stylesheet" />
+    <%--<link href="css/css/bootstrap1.min.css" rel="stylesheet" />--%>
     <!-- Custom CSS -->
     <link href="css/css/the-big-picture.css" rel="stylesheet" />
-    <link href="css/css/font-icon.css" rel="stylesheet" type="text/css" />
-    <link href="css/css/main.css" rel="stylesheet" type="text/css" />
-    <link href="css/css/responsive.css" rel="stylesheet" type="text/css" />
     <!-- ============ Google fonts ============ -->
     <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet'
         type='text/css' />
@@ -19,6 +16,7 @@
     <div class="container padding100 full">
 
         <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3 col-xs-offset-0 col-xs-12 col-xs-offset-0 padding-top50">
+
 
            <div class="registrationform">
                 <asp:Login ID="Login" runat="server" OnAuthenticate="Login_Authenticate">

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage_user.master.cs" Inherits="MasterPage_user" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage_user.master.cs"  Inherits="MasterPage_user" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -25,18 +25,20 @@
     <title id="title" runat="server">Trip & Shoot</title>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <!-- SmartMenus jQuery Bootstrap Addon CSS -->
+   
+     <!-- SmartMenus jQuery Bootstrap Addon CSS -->
     <link href="css/jquery.smartmenus.bootstrap.css" rel="stylesheet" />
     <link href="css/owl/owl.carousel.css" rel="stylesheet" type="text/css" />
     <link href="css/owl/owl.theme.css" rel="stylesheet" type="text/css" />
     <link href="css/owl/owl.transitions.css" rel="stylesheet" type="text/css" />
-    <!-- Custom CSS -->
+   
+     <!-- Custom CSS -->
     <link href="css/1-col-portfolio.css" rel="stylesheet" />
 
     <link href="css/calendarstyle.css" rel="stylesheet" />
 
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet'
-        type='text/css'>
+        type='text/css' />
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700"
         rel="stylesheet" type="text/css" />
 
@@ -57,36 +59,30 @@
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
-               <%-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
-                        class="icon-bar"></span><span class="icon-bar"></span>
-                </button>--%>
-                <%--<a class="navbar-brand" href="#"><i class="fa fa-diamond"></i>Akshara</a>--%>
                 <asp:HyperLink ID="HyperLink1" runat="server" CssClass="navbar-brand fa fa-camera" > Trip & Shoot</asp:HyperLink>
             </div>
-            <div class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse">
                 <!-- Left nav -->
+                <!--hidden button in order to call js in back end -->
                 <asp:Button ID="displayLogin" runat="server" Visible="false" CausesValidation="false" OnClientClick="display" />
+                <!--hidden label in order to record skin name -->
+                <asp:Label ID="skinrecord" runat="server" Visible="false" Text="none"/>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="Home.aspx" runat="server">Home</a></li>
+                    <li><a href="Home.aspx" runat="server">Home</a></li>
                     <li><a href="register.aspx" runat="server">Registration</a></li>
                     <li class="dropdown"><a href="~/Auth/AboutUs.aspx" class="dropdown-toggle" data-toggle="dropdown"
                         role="button" aria-haspopup="true" aria-expanded="false" runat="server">About Us<span class="caret"
                             runat="server"></span></a>
                         <ul class="dropdown-menu" data-dropdown-in="fadeInUp" data-dropdown-out="fadeOutDown">
                             <li><a href="~/Auth/History.aspx" runat="server">Our History</a></li>
-                            <li><a href="~/Auth/FAQ.aspx" runat="server">Frequently Asked Questions</a></li>
-                            
+                            <li><a href="~/Auth/FAQ.aspx" runat="server">Frequently Asked Questions</a></li>                           
                         </ul>
                     </li>
                     <li><a href="~/Auth/SiteMap.aspx" runat="server">Site Map</a></li>
-
                     <li><a href="~/Auth/Documentation.aspx" runat="server">Documentation</a></li>
-<!--                    <li>
-                        <asp:Label ID="lbl_user" runat="server" Text="Hello,User"></asp:Label>
-                    </li>-->
                     <li><asp:HyperLink ID="hluser" runat="server" Text ="Login" NavigateUrl="~/login.aspx" /></li>
                     <li><asp:LinkButton ID="hllogout" runat="server" CausesValidation="false" Text ="Logout" OnClick="Logout" /></li>
+                    <li><asp:LinkButton ID="skinbut" runat="server" CausesValidation="false" Text ="ChangeSkin" OnClick="Changeskin" /></li>
                 </ul>
             </div>
         </div>

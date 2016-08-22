@@ -10,6 +10,14 @@ public partial class preview_dotnet_templates_registration_Form_index : System.W
     protected void Page_Load(object sender, EventArgs e)
     {
     }
+    protected void Page_PreInit(object sender, EventArgs e)
+    {
+        System.Diagnostics.Debug.WriteLine("theme");
+        if (Request.QueryString["theme"] != null)
+        {
+            Page.Theme = Request.QueryString["theme"].ToString();
+        }
+    }
     protected void Register(object sender, EventArgs e)
     {
         Boolean flag = false;

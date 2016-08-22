@@ -63,6 +63,9 @@
                       <br /><br />
                     </section>
             </ItemTemplate>
+            <EmptyDataTemplate>
+                <asp:Label runat="server" Text="No Meeting Users"></asp:Label>
+            </EmptyDataTemplate>
         </asp:listView>
     </div>
 </asp:Content>

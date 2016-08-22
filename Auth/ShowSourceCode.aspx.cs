@@ -16,6 +16,14 @@ public partial class Auth_ShowSourceCode : System.Web.UI.Page
         cscodetitle.Text = fp + ".cs";
         showcscode.Text = ReadFile(Server.MapPath(fp + ".cs"));
     }
+    protected void Page_PreInit(object sender, EventArgs e)
+    {
+        System.Diagnostics.Debug.WriteLine("theme");
+        if (Request.QueryString["theme"] != null)
+        {
+            Page.Theme = Request.QueryString["theme"].ToString();
+        }
+    }
     private String ReadFile(String filepath)
     {
         String fileoutput = "";

@@ -15,6 +15,15 @@ public partial class SendMail : System.Web.UI.Page
     {
         Page.Title = "Send Email";
     }
+    protected void Page_PreInit(object sender, EventArgs e)
+    {
+        System.Diagnostics.Debug.WriteLine("theme");
+        if (Request.QueryString["theme"] != null)
+        {
+            Page.Theme = Request.QueryString["theme"].ToString();
+        }
+    }
+
     protected void btnSend_Click(object sender, EventArgs e)
     {
         MailMessage newMsg = new MailMessage();
