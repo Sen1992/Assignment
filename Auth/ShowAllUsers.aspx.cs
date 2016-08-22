@@ -9,7 +9,6 @@ public partial class Auth_ShowAllUsers : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
     }
     protected void Dispalyuser(object sender, GridViewCommandEventArgs e) {
 

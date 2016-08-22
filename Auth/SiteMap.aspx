@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage_user.master" AutoEventWireup="true" CodeFile="SiteMap.aspx.cs" Inherits="SiteMap" %>
+﻿<%@ Page Title="SiteMap" Language="C#" MasterPageFile="~/MasterPage_user.master" AutoEventWireup="true" CodeFile="SiteMap.aspx.cs" Inherits="SiteMap" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainBody" runat="Server">
     <!--introduction-->
@@ -66,6 +66,7 @@
                     <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
 
                     <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ImageSet="BulletedList4" Height="443px" Width="466px" Font-Size="Larger" ShowExpandCollapse="False">
+
                         <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
                         <NodeStyle Font-Names="Tahoma" Font-Size="20pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="5px" VerticalPadding="0px" />
                         <ParentNodeStyle Font-Bold="False" />

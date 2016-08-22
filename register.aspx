@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/MasterPage_visitor.master" CodeFile="register.aspx.cs" Inherits="preview_dotnet_templates_registration_Form_index" %>
+﻿<%@ Page Title="Register" Language="C#" AutoEventWireup="true" MasterPageFile="~/MasterPage_user.master" CodeFile="register.aspx.cs" Inherits="preview_dotnet_templates_registration_Form_index" %>
 <asp:Content ID="Registercontent" ContentPlaceHolderID="MainBody" Runat="Server">
     <asp:accessdatasource runat="server" id="users" DataFile="~/App_Data/database.accdb" 
     SelectCommand="SELECT * FROM [user]" DeleteCommand="DELETE FROM [user] WHERE [ID] = ?" InsertCommand="INSERT INTO [user] ([username], [password], [gender], [degree], [email], [phoneno], [homepage], [hobby]) VALUES (?, ?, ?, ?, ?, ?, ?, ?)" OnSelecting="users_Selecting" UpdateCommand="UPDATE [user] SET [username] = ?, [password] = ?, [gender] = ?, [degree] = ?, [email] = ?, [phoneno] = ?, [homepage] = ? WHERE [ID] = ?">
@@ -38,14 +38,6 @@
     }
 
 </script>
-
-
-    <meta charset="utf-8" />
-    <!-- Set the viewport width to device width for mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Coming soon, Bootstrap, Bootstrap 3.0, Free Coming Soon, free coming soon, free template, coming soon template, Html template, html template, html5, Code lab, codelab, codelab coming soon template, bootstrap coming soon template" />
-    <title>Register the app</title>
-
     <!-- ============ Google fonts ============ -->
     <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet'
         type='text/css' />
@@ -55,8 +47,7 @@
     <link href="css/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="css/css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <div class="container padding100 ful">
-            
+    <div class="container padding100">      
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <!--bread crump-->
             <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="0.8em" PathSeparator=" : ">

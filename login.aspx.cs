@@ -9,14 +9,13 @@ public partial class preview_dotnet_templates_the_big_picture_login : System.Web
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
     }
     protected void CheckLogin(object sender, SqlDataSourceStatusEventArgs e)
     {
         if (e.AffectedRows > 0)
         {
             
-            System.Web.Security.FormsAuthentication.RedirectFromLoginPage(Login.UserName,true);
+            System.Web.Security.FormsAuthentication.RedirectFromLoginPage(Login.UserName,false);
         }
         else
         {
@@ -31,7 +30,7 @@ public partial class preview_dotnet_templates_the_big_picture_login : System.Web
 
         if (UserLogin.Select(DataSourceSelectArguments.Empty).GetEnumerator().MoveNext())
         {
-            System.Web.Security.FormsAuthentication.RedirectFromLoginPage(Login.UserName, true);
+            System.Web.Security.FormsAuthentication.RedirectFromLoginPage(Login.UserName, false);
         }
         else
         {

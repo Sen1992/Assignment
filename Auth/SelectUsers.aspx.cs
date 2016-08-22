@@ -9,7 +9,6 @@ public partial class Auth_SelecteUsers : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
     }
     protected void Findusers(object sender, EventArgs e) {
         Button btn = (Button)sender;

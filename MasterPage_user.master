@@ -1,20 +1,31 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage_user.master.cs" Inherits="MasterPage_user" %>
-
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Trip & Shoot</title>
+<script type="text/javascript">
+    function display() {
+        var login = document.getElementById("hluser");
+        var logout = document.getElementById("hllogout");
+        if (login.innerText == "Login") {
+            login.style.display = "";
+            logout.style.display = "none";
+        }
+        else {
+            login.style.display = "";
+            logout.style.display = "";
+        }
+    }
+</script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title id="title" runat="server">Trip & Shoot</title>
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <!-- SmartMenus jQuery Bootstrap Addon CSS -->
-    <link href="css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
+    <link href="css/jquery.smartmenus.bootstrap.css" rel="stylesheet" />
     <link href="css/owl/owl.carousel.css" rel="stylesheet" type="text/css" />
     <link href="css/owl/owl.theme.css" rel="stylesheet" type="text/css" />
     <link href="css/owl/owl.transitions.css" rel="stylesheet" type="text/css" />
@@ -27,8 +38,9 @@
         type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700"
         rel="stylesheet" type="text/css" />
+
     <!-- Required plugin - Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" />
     <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,8 +48,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
 </head>
 <body>
     <form id="form1" runat="server">
@@ -55,6 +65,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <!-- Left nav -->
+                <asp:Button ID="displayLogin" runat="server" Visible="false" CausesValidation="false" OnClientClick="display" />
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="Home.aspx" runat="server">Home</a></li>
                     <li><a href="register.aspx" runat="server">Registration</a></li>
@@ -73,8 +84,8 @@
 <!--                    <li>
                         <asp:Label ID="lbl_user" runat="server" Text="Hello,User"></asp:Label>
                     </li>-->
-                    <li><asp:HyperLink ID="hluser" runat="server" Text ="Login" /></li>
-                    <li><asp:LinkButton ID="hllogout" runat="server" Text ="Logout" OnClick="Logout" /></li>
+                    <li><asp:HyperLink ID="hluser" runat="server" Text ="Login" NavigateUrl="~/login.aspx" /></li>
+                    <li><asp:LinkButton ID="hllogout" runat="server" CausesValidation="false" Text ="Logout" OnClick="Logout" /></li>
                 </ul>
             </div>
         </div>
@@ -97,7 +108,7 @@
 						<div class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.2s">
 							<h3 class="fh5co-lead">Contact</h3>
 							<ul>
-								<li><a href="SendMail.aspx">Email</a></li>
+								<li><asp:HyperLink runat="server" NavigateUrl="~/Auth/SendMail.aspx">Email</asp:HyperLink></li>
 								
 							</ul>
 						</div>
@@ -111,15 +122,14 @@
 						<div class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.6s">
 							<h3 class="fh5co-lead">More Links</h3>
 							<ul>
-								<li><a href="#">AdRotator</a></li>
-								<li><a href="#">Master Page</a></li>
-								
+                                <li><asp:LinkButton runat="server" Text="AdRotator" OnClick="ContentCode" CausesValidation="false" /></li>
+                                <li><asp:LinkButton runat="server" Text="Master Page" OnClick="MasterCode" CausesValidation="false" /></li>								
 							</ul>
 						</div>
 
 						<div class="col-md-3 col-sm-12 col-md-pull-9 animated wow fadeInLeft" data-wow-delay="0.8s">
 							<div class="fh5co-footer-logo"><a href="#">FIT5192</a></div>
-							<p class="fh5co-copyright"><small>&copy;Copyright 2016. By Lancelot & Sen.<br></small></p>
+							<p class="fh5co-copyright"><small>&copy;Copyright 2016. By Lancelot & Sen.<br /></small></p>
 							<p class="fh5co-social-icons">
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-facebook"></i></a>
@@ -127,8 +137,7 @@
 								<a href="#"><i class="fa fa-github"></i></a>
 								<a href="#"><i class="fa fa-youtube"></i></a>
 							</p>
-						</div>
-						
+						</div>				
 					</div>
 				</div>
 			</div>

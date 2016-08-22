@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage_user.master" AutoEventWireup="true" CodeFile="AboutUs.aspx.cs" Inherits="AboutUs" %>
+﻿<%@ Page Title="About Us" Language="C#" MasterPageFile="~/MasterPage_user.master" AutoEventWireup="true" CodeFile="AboutUs.aspx.cs" Inherits="AboutUs" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainBody" Runat="Server">
      <div class="padding100" id="blog">
@@ -27,7 +27,7 @@
                 <div class="col-md-5">
                     <a href="#">
                         <img class="img-responsive animated wow fadeInLeft" data-wow-delay="0.2s" src="img/about.jpg"
-                            alt="">
+                            alt="" />
                     </a>
                 </div>
                 <div class="col-md-7 animated wow fadeInRight" data-wow-delay="0.4s">
@@ -37,7 +37,6 @@
                         This is a website made by Lancelot and Sen.
                     </p>
                     
-
                 </div>
             </div>
 

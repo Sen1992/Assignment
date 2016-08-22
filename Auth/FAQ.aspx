@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage_user.master" AutoEventWireup="true" CodeFile="FAQ.aspx.cs" Inherits="FAQ" %>
-
+﻿<%@ Page Title="FAQ" Language="C#" MasterPageFile="~/MasterPage_user.master" AutoEventWireup="true" CodeFile="FAQ.aspx.cs" Inherits="FAQ" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainBody" runat="Server">
     <div class="padding100" id="blog">
         <div class="container">
@@ -56,7 +55,6 @@
                         <strong>Q: Where is the work building of Trip & Shoot?</strong><br />
                         <strong>A:</strong> Our work building is on the LinQuan Street at Suzhou, you can find us on Google map easily.
                     </p>
-
                 </div>
             </div>
 

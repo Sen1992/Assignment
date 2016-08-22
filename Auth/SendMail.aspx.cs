@@ -13,7 +13,7 @@ public partial class SendMail : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        Page.Title = "Send Email";
     }
     protected void btnSend_Click(object sender, EventArgs e)
     {

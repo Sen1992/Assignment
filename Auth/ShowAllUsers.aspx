@@ -1,13 +1,9 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage_user.master" AutoEventWireup="true" CodeFile="ShowAllUsers.aspx.cs" Inherits="Auth_ShowAllUsers" %>
-
+﻿<%@ Page Title="All Users List" Language="C#" MasterPageFile="~/MasterPage_user.master" AutoEventWireup="true" CodeFile="ShowAllUsers.aspx.cs" Inherits="Auth_ShowAllUsers" %>
 <asp:Content ID="loginConten" ContentPlaceHolderID="MainBody" runat="Server">
-
     <link href="../css/gridview.css" rel="stylesheet" type="text/css" />
-    
     <div class="padding100 container" style="">
     <p><asp:label runat="server" Font-Size="XX-Large">The following is all users</asp:label></p>
     <asp:AccessDataSource ID="UserShow" runat="server" DataFile="~/App_Data/database.accdb" SelectCommand="SELECT * FROM [user]"></asp:AccessDataSource>
-
     <asp:GridView runat="server" ID="gvuser" CssClass="GridViewStyle" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="UserShow" OnRowCommand="Dispalyuser">
         <FooterStyle CssClass="GridViewFooterStyle" />
         <RowStyle CssClass="GridViewRowStyle" />   
@@ -28,10 +24,7 @@
             <asp:ButtonField ButtonType="Link" HeaderText="Operation" Text="Display" ItemStyle-ForeColor="Blue"/>
         </Columns>
     </asp:GridView>
-
-        <br /><hr />
+    <br /><hr />
     <asp:Label ID="lbdisplay" Font-Size="Larger" runat="server" />
-
     </div>
-
 </asp:Content>

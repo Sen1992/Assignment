@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage_visitor.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="test" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage_user.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="test" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainBody" runat="Server">
 
@@ -35,12 +35,7 @@
                 <div class="main-text hidden-xs">
                     <div class="col-md-12 text-center">
                         <h1>If you shed tears when you miss the <b class="yellow">Sun</b>,<br /> you also miss the<b class="yellow"> Stars</b><span class="span">.</span></h1>
-                         
-
-                       <%-- <div class="">
-                            <asp:HyperLink ID="HyperLink3" runat="server" CssClass="btn btn-clear btn-sm btn-min-block">learn More</asp:HyperLink>
-                            <asp:HyperLink ID="HyperLink4" runat="server" CssClass="btn btn-clear btn-sm btn-min-block">Download</asp:HyperLink>
-                        </div>--%>
+                        
                     </div>
                 </div>
             </div>
@@ -49,10 +44,6 @@
                     <div class="col-md-12 text-center">
                         <h1>Like<b class="yellow"> Sunday</b><br /> like <b class="yellow">Rain</b>
                             <span class="span">.</span></h1>
-                        <%--<div class="">
-                            <asp:HyperLink ID="HyperLink5" runat="server" CssClass="btn btn-clear btn-sm btn-min-block">Android</asp:HyperLink>
-                            <asp:HyperLink ID="HyperLink6" runat="server" CssClass="btn btn-clear btn-sm btn-min-block">Apple</asp:HyperLink>
-                        </div>--%>
                     </div>
                 </div>
             </div>
@@ -101,8 +92,7 @@
                     <p>
                         Trip & Shoot is a website where you may share your original photos 
                         and also a place to record the moment your heart miss a beat.
-                    </p>
-                    
+                    </p>                  
                 </div>
             </div>
 

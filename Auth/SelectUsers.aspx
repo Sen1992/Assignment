@@ -1,19 +1,12 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage_user.master" AutoEventWireup="true" CodeFile="SelectUsers.aspx.cs" Inherits="Auth_SelecteUsers" %>
-<asp:Content ID="loginConten" ContentPlaceHolderID="MainBody" runat="Server">
-    
+﻿<%@ Page Title="Select Users" Language="C#" MasterPageFile="~/MasterPage_user.master" AutoEventWireup="true" CodeFile="SelectUsers.aspx.cs" Inherits="Auth_SelecteUsers" %>
+<asp:Content ID="loginConten" ContentPlaceHolderID="MainBody" runat="Server">  
     <asp:AccessDataSource ID="select" runat="server" DataFile="~/App_Data/database.accdb" SelectCommand="SELECT * FROM [user]"></asp:AccessDataSource>
     <link rel="stylesheet" href="../css/tablestyle.css" media="screen" type="text/css" />
     <div class="container padding100">
         <asp:label runat="server" Font-Size="XX-Large">Find Users!</asp:label>
-        
-        
-        
-        <br /><br /><br />
-
-       
+        <br /><br /><br /> 
         <div style="text-align:center">
         <table style="margin:auto">
-
             <tr>
                 <td colspan="10"><asp:Label runat="server" Text="User Name:" Font-Size="Large"></asp:Label></td>
                 <td colspan="18">
@@ -24,10 +17,7 @@
                     <asp:Button ID="btnUser" runat="server" OnClick="Findusers" Text="Search" CommandName="User" />
                 </td>
             </tr>
-
             <tr><td><br /></td></tr>
-           
-
             <tr>
                 <td colspan="10"><asp:Label runat="server" Text="Email:" Font-Size="Large"></asp:Label></td>
                 <td colspan="18">
@@ -38,9 +28,7 @@
                     <asp:Button ID="btnEamil" runat="server" Text="Search" OnClick="Findusers" CommandName="Email" />
                 </td>
             </tr>
-
             <tr><td><br /></td></tr>
-
             <tr>
                 <td colspan="10"><asp:Label runat="server" Text="Gender:" Font-Size="Large"></asp:Label></td>
                 <td colspan="18">

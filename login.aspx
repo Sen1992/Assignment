@@ -1,14 +1,8 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage_visitor.master" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="preview_dotnet_templates_the_big_picture_login" %>
+﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/MasterPage_user.master" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="preview_dotnet_templates_the_big_picture_login" %>
 
 <asp:Content ID="loginConten" ContentPlaceHolderID="MainBody" runat="Server">
     <asp:AccessDataSource ID="UserLogin" runat="server" DataFile="~/App_Data/database.accdb" SelectCommand="SELECT * FROM [user]" OnSelected="CheckLogin" />
-
-
-
-
-
     <!-- Bootstrap Core CSS -->
-    <title>Please Login Your App</title>
     <link href="css/css/bootstrap1.min.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="css/css/the-big-picture.css" rel="stylesheet" />
@@ -21,8 +15,6 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,800'
         rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-
-
 
     <div class="container padding100 full">
 
@@ -43,7 +35,6 @@
                                 <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="ctl02" />
                             </div>
                             <div class="form-group text-left">
-<!--                              <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time." />-->
                                 <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
                             </div>
                             <div class="form-group">

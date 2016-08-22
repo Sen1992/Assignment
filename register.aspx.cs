@@ -9,7 +9,6 @@ public partial class preview_dotnet_templates_registration_Form_index : System.W
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
     }
     protected void Register(object sender, EventArgs e)
     {
