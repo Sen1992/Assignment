@@ -13,6 +13,7 @@
         else {
             login.style.display = "";
             logout.style.display = "";
+            login.setAttribute('href','#');
         }
     }
 </script>
