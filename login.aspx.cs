@@ -9,13 +9,21 @@ public partial class preview_dotnet_templates_the_big_picture_login : System.Web
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        LinkButton code1link = (LinkButton)Master.FindControl("code1link");
+        LinkButton code2link = (LinkButton)Master.FindControl("code2link");
+        code1link.Text = "Login";
+        code2link.Visible = false;
     }
     protected void Page_PreInit(object sender, EventArgs e)
     {
-        System.Diagnostics.Debug.WriteLine("theme");
-        if (Request.QueryString["theme"] != null)
+        if (Session["Theme"] != null)
         {
-            Page.Theme = Request.QueryString["theme"].ToString();
+            Page.Theme = (String)Session["Theme"];
+        }
+        else
+        {
+
+            Page.Theme = "none";
         }
     }
     protected void CheckLogin(object sender, SqlDataSourceStatusEventArgs e)

@@ -15,10 +15,15 @@ public partial class test : System.Web.UI.Page
 
     protected void Page_PreInit(object sender, EventArgs e)
     {
-        System.Diagnostics.Debug.WriteLine("theme");
-        if (Request.QueryString["theme"] != null)
+
+        if (Session["Theme"] != null)
         {
-                Page.Theme = Request.QueryString["theme"].ToString();
+            Page.Theme = (String)Session["Theme"];
+        }
+        else
+        {
+
+            Page.Theme = "none";
         }
     }
 }

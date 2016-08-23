@@ -5,7 +5,8 @@
     <!-- Bootstrap Core CSS -->
     <%--<link href="css/css/bootstrap1.min.css" rel="stylesheet" />--%>
     <!-- Custom CSS -->
-    <link href="css/css/the-big-picture.css" rel="stylesheet" />
+    <link href="css/the-big-picture.css" rel="stylesheet" />
+
     <!-- ============ Google fonts ============ -->
     <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet'
         type='text/css' />

@@ -11,14 +11,22 @@ public partial class SiteMap : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-            GetEventDates();
+        LinkButton code1link = (LinkButton)Master.FindControl("code1link");
+        LinkButton code2link = (LinkButton)Master.FindControl("code2link");
+        code1link.Text = "Site Map";
+        code2link.Visible = false;
+        GetEventDates();
     }
     protected void Page_PreInit(object sender, EventArgs e)
     {
-        System.Diagnostics.Debug.WriteLine("theme");
-        if (Request.QueryString["theme"] != null)
+        if (Session["Theme"] != null)
         {
-            Page.Theme = Request.QueryString["theme"].ToString();
+            Page.Theme = (String)Session["Theme"];
+        }
+        else
+        {
+
+            Page.Theme = "none";
         }
     }
 

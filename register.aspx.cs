@@ -9,13 +9,21 @@ public partial class preview_dotnet_templates_registration_Form_index : System.W
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        LinkButton code1link = (LinkButton)Master.FindControl("code1link");
+        LinkButton code2link = (LinkButton)Master.FindControl("code2link");
+        code1link.Text = "Add Records";
+        code2link.Visible = false;
     }
     protected void Page_PreInit(object sender, EventArgs e)
     {
-        System.Diagnostics.Debug.WriteLine("theme");
-        if (Request.QueryString["theme"] != null)
+        if (Session["Theme"] != null)
         {
-            Page.Theme = Request.QueryString["theme"].ToString();
+            Page.Theme = (String)Session["Theme"];
+        }
+        else
+        {
+
+            Page.Theme = "none";
         }
     }
     protected void Register(object sender, EventArgs e)
@@ -63,21 +71,7 @@ public partial class preview_dotnet_templates_registration_Form_index : System.W
             "<tr><td><strong>Degree:</strong></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + PhoneTextbox.Text + "</td><tr>" +
             "<tr><td><strong>Hobby:</strong></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + hobby + "</td><tr>" +
             "<tr><td><strong>HomePage:</strong></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>" + HPTextbox.Text + "</td><tr></table>";
-      
-  //      Response.Write("<script Language=JavaScript>alert('Register successfully');</script>");
-    //    Server.Transfer("login.aspx");
-     
     }
-    /*
-    protected void LengthTest(object source, ServerValidateEventArgs args) {
-        if (args.Value.Length < 6 || args.Value.Length > 18)
-        {
-            args.IsValid = false;
-        }
-        else {
-            args.IsValid = true;
-        }
-    }*/
     protected void users_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
     {
 
